@@ -1,0 +1,231 @@
+<html>
+
+<head>
+
+<style>
+
+body
+
+{
+
+font-family: Arial, Sans-serif;
+
+}
+
+label.error
+
+{
+
+color:red;
+
+font-family:verdana, Helvetica;
+
+}
+
+</style>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-
+
+validate/1.19.0/jquery.validate.js"></script>
+
+</head>
+
+<body>
+
+<fieldset >
+
+<form action="#" name="registration" id="registration">
+
+<center>
+
+<font size=4><b>Student Registration Form</b></font>
+
+</center>
+
+<label>Name</label>
+
+<input type=”text” name="textname" id="textname" size="30"><br><br>
+
+<label>Father Name</label>
+
+<input type="text" name="fathername" id="fathername" size="30"><br><br>
+
+<label>Postal Address<label>
+
+<input type="text" name="paddress" id="paddress" size="30"><br><br>
+
+<label>Personal Address</label>
+
+<input type="text" name="personaladdress" id="personaladdress" size="30"><br><br>
+
+<p>Geder</p>
+
+<input type="radio" name="Geder" id="Gender" value="male" size="10">Male
+
+<input type="radio" name="Geder" id="Gender"value="Female" 
+
+size="10">Female<br><br>
+
+<label>City</label>
+
+<select name="city" id="city" required>
+
+<option value="-1" selected>select..</option>
+
+<option value="nellore">NELLORE</option>
+
+<option value="ongole">ONGOLE</option>
+
+<option value="vijayawada">VIJAYAWADA</option>
+
+<option value="hyderabad">HYDERABAD</option>
+
+<option value="chennai">CHENNAI</option>
+
+<option value="bangalore">BANGALORE</option>
+
+</select><br><br>
+
+<label>Course</label>
+
+<select name="course" id="course" required>
+
+<option value="-1" selected>select..</option>
+
+<option value="B.Tech">B.TECH</option>
+
+<option value="MCA">MCA</option>
+
+<option value="MBA">MBA</option>
+
+<option value="BCA">BCA</option>
+
+</select><br><br>
+
+<label>District</label>
+
+<select name="district" id="district" required>
+
+<option >select..</option>
+
+<option value="nellore">NELLORE</option>
+
+<option value="ongole">ONGOLE</option>
+
+<option value="vijayawada">VIJAYAWADA</option>
+
+<option value="hyderabad">HYDERABAD</option>
+
+<option value="chennai">CHENNAI</option>
+
+<option value="bangalore">BANGALORE</option> </select><br><br>
+
+<label>State<label>
+
+<select Name="state" id="state" required>
+
+<option >select..</option>
+
+<option value="ap">ANDHRA PRADESH</option>
+
+<option value="ts">TELENGANA</option>
+
+<option value="tn">TAMIL NADU</option>
+
+<option value="ka">KARNATAKA</option>
+
+</select><br><br>
+
+<label>PinCode</label>
+
+<input type="text" name="pincode" id="pincode" size="30"><br><br>
+
+<label>EmailId</label>
+
+<input type="text" name="emailid" id="emailid" size="30"><br><br>
+
+<label>Date of Birth: </label>
+
+<input type="date" name="date" id="date" ><br><br>
+
+<label>MobileNo</label>
+
+<input type="text" name="mobileno" id="mobileno" pattern="[1-9]{1}[0-9]{9}" 
+
+maxlength="10" ><br><br>
+
+<input type="reset">
+
+<input type="submit" value="Submit Form" /><br><br>
+
+</form></fieldset>
+
+<script>
+
+$(document).ready(function(){
+
+$("#registration").validate({
+
+// Specify validation rules
+
+rules: {
+
+textname: "required",
+
+fathername: "required",
+
+paddress: "required",
+
+personaladdress: "required",
+
+Geder: "required",
+
+// city: "required",
+
+//course: "required",
+
+//district: "required",
+
+//state: "required",
+
+pincode: {
+
+required:true,
+
+zipcode:true,
+
+},
+
+date:{
+
+required:true,
+
+},
+
+emailid: {
+
+required: true,
+
+email: true
+
+},
+
+mobileno: {
+
+required: true,
+
+},
+
+},
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>
